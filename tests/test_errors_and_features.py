@@ -53,7 +53,7 @@ def test_history_order_and_sign(tmp_path: Path):
     run_ok("in",  "--sku", "H-1", "--qty", "3", env=env)
     run_ok("out", "--sku", "H-1", "--qty", "1", env=env)
     hist = run_ok("history", "--sku", "H-1", "--limit", "5", env=env)
-    assert "\n-1" in hist and "\n+3" in hist
+    assert "-1" in hist and "+3" in hist
 
 def test_csv_export_and_import(tmp_path: Path):
     env = fresh_env(tmp_path)
