@@ -1,4 +1,8 @@
-import os, subprocess, sys, re
+import os
+import subprocess
+import sys
+import re
+
 from pathlib import Path
 PY = sys.executable
 
