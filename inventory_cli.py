@@ -279,7 +279,7 @@ def build_parser() -> argparse.ArgumentParser:
     sp = sub.add_parser("stock", help="現在庫を表示")
     sp.add_argument("--sku", required=True)
 
-    lp = sub.add_parser("list", help="品目一覧(現在庫つき)")
+    sub.add_parser("list", help="品目一覧(現在庫つき)")
 
     hp = sub.add_parser("history", help="入出庫履歴を表示")
     hp.add_argument("--sku", required=True)
